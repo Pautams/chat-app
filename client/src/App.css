@@ -1,19 +1,33 @@
 .App {
   width: 100%;
-  background: #fff;
+  background: #ABCDEF;
   color: #212121;
   display: grid;
   place-items: center;
+
 }
 
 body {
   margin: 0%;
   padding: 0%;
+  background: #ABCDEF;
 }
 
 .mainContainer {
-  display: flex;
-  flex-direction: column;
+  color: white;
+  background:  #136a8a;
+  background: 
+    -webkit-linear-gradient(to right, #267871, #136a8a);
+  background: 
+    linear-gradient(to right, #267871, #136a8a);
+  margin: auto;
+  box-shadow: 
+    0px 2px 10px rgba(0,0,0,0.2), 
+    0px 10px 20px rgba(0,0,0,0.3), 
+    0px 30px 60px 1px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  padding: 50px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -28,7 +42,7 @@ body {
 }
 
 .mainContainer button {
-  width: 100%;
+  width: 45%;
   height: 50px;
   margin: 7px;
   border: none;
@@ -45,8 +59,9 @@ body {
 }
 
 .chat-window {
+  margin-top: 50px;
   width: 60%;
-  height: 420px;
+  height: 520px;
 }
 
 .chat-window .chat-header {
@@ -54,7 +69,7 @@ body {
   border-radius: 6px;
   background: #263238;
   position: relative;
-  cursor: pointer;
+  font-family: Assistant, sans-serif;
 }
 
 .chat-window .chat-header p {
@@ -66,10 +81,9 @@ body {
 }
 
 .chat-window .chat-body {
-  height: calc(450px - (45px + 70px));
+  height: calc(750px - (45px + 70px));
   border: 1px solid #263238;
   background: #fff;
-
   position: relative;
 }
 
@@ -172,10 +186,10 @@ body {
   cursor: pointer;
   flex: 15%;
   height: 100%;
-  background: transparent;
   outline: none;
   font-size: 25px;
   color: lightgray;
+  background: #43a047;
 }
 
 .chat-window .chat-footer button:hover {
