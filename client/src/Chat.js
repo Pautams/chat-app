@@ -32,7 +32,7 @@ function Chat({ socket, name, room }) {
     return (
         <div className='chat-window'>
             <div className='chat-header'>
-              <p><center>Welcome to Chat Room </center></p>
+              <p><center>Welcome to Room: {room}</center></p>
             </div>
             <div className='chat-body'>
                 <ScrollToBottom className='message-container'>
