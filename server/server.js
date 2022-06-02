@@ -3,8 +3,6 @@ const app = express()
 const cors = require('cors')
 const http = require('http')
 const { Server } = require('socket.io') //importing socket.io library
-
-
 const mysql = require('mysql')
 
 const connection = mysql.createConnection({
@@ -31,6 +29,8 @@ io.on('connection', (socket) => {
     socket.on('set_room', (data,name) => {
         socket.join(data)
         console.log(`Name: ${name} Chat Room: ${data}`)
+        connection.query("INSERT INTO room (name, room) VALUES ('" + name + "', '" + data + "')")
+
     })
 
     socket.on('send_message', (data) => {

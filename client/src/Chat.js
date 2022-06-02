@@ -27,12 +27,15 @@ function Chat({ socket, name, room }) {
         socket.on('receive_message', (data) => {
             setMessageList((list) => [...list, data]);
         });
+        return (data) => {
+            socket.off('receive_message', data)
+        }
     }, [socket]);
 
     return (
         <div className='chat-window'>
             <div className='chat-header'>
-              <p><center>Welcome to Room: {room}</center></p>
+                <p><center>Welcome to Room:{room}</center></p>
             </div>
             <div className='chat-body'>
                 <ScrollToBottom className='message-container'>
@@ -42,7 +45,7 @@ function Chat({ socket, name, room }) {
                                 className='message'
                                 id={name === messageContent.author ? 'other' : 'you'}
                             >
-                                <div className='message-right'>
+                                <div>
                                     <div className='message-content'>
                                         <p>{messageContent.message}</p>
                                     </div>
@@ -60,7 +63,7 @@ function Chat({ socket, name, room }) {
                 <input
                     type='text'
                     value={currentMessage}
-                    placeholder='Start chatting now...'
+                    placeholder='Start chatting now'
                     onChange={(event) => {
                         setCurrentMessage(event.target.value);
                     }}
