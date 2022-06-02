@@ -42,7 +42,7 @@ function Chat({ socket, name, room }) {
                                 className='message'
                                 id={name === messageContent.author ? 'other' : 'you'}
                             >
-                                <div>
+                                <div className='message-right'>
                                     <div className='message-content'>
                                         <p>{messageContent.message}</p>
                                     </div>
