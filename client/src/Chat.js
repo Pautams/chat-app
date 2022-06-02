@@ -27,6 +27,9 @@ function Chat({ socket, name, room }) {
         socket.on('receive_message', (data) => {
             setMessageList((list) => [...list, data]);
         });
+        return (data) => {
+            socket.off('receive_message', data)
+          }
     }, [socket]);
 
     return (

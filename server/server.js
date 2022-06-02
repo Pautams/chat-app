@@ -3,8 +3,6 @@ const app = express()
 const cors = require('cors')
 const http = require('http')
 const { Server } = require('socket.io') //importing socket.io library
-
-
 const mysql = require('mysql')
 
 const connection = mysql.createConnection({
