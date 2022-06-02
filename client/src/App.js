@@ -21,7 +21,7 @@ function App() {
     <div className='App'>
       {!showChat ? (
         <div className='mainContainer'>
-          <h1>Ron-Paul ChatRoom</h1>
+          <h1>Ron'Paul Chat Room</h1>
           <input
             type='text'
             placeholder='Enter Name'
@@ -43,7 +43,7 @@ function App() {
           <button
             onClick={set_room}
           >
-            Join Now</button>
+            Enter Room</button>
         </div>
       ) : (
         <Chat
